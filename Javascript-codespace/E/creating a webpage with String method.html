@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Pattern of the string : <span id="res"></span></p>
+    <script>
+        let mystring = "I live in Tenkasi.";
+        let Pattern = /T/;
+        document.getElementById('res').innerHTML=Pattern.test(mystring);
+    </script>
+</body>
+</html>

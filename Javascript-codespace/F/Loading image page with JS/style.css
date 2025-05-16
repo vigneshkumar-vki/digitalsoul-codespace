@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0652dd;
+}
+.container{
+    width: 390px;
+    background-color: #fff;
+    padding: 50px 0;
+    border-radius: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container .circular-progress-bar{
+    position: relative;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container .circular-progress-bar::before{
+    content: "";
+    position: absolute;
+    height: 210px;
+    width: 210px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.container .circular-progress-bar .progress-value{
+    position:relative;
+    font-size: 40px;
+    font-weight: 600;
+    color:rgb(255, 15, 15);
+}

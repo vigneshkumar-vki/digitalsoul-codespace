@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript ...!</title>
+    <script>
+        function myfunc()
+        {
+            var ret= document.title;
+            alert("document Title : "+ret);
+
+            var ret= document.URL;
+            alert("document url : "+ret);
+
+            var ret= document.forms[0];
+            alert("document firstform :"+ret);
+
+            var ret= document.forms[0].elements[1];
+            alert("second element :"+ret);
+        }
+    </script>
+</head>
+<body>
+    <h1 id="title">This is Main title</h1>
+    <p>click button</p>
+    <form name="firstform">
+        <input type="button" value="clickme" onclick="myfunc();">
+        <input type="button" value="cancel">
+    </form>
+    <form name="secondform">
+        <input type="button" value="Don't click me">
+    </form>
+</body>
+</html>

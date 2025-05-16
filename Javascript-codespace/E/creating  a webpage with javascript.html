@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function myfun()
+        {
+            var ret =document.all["heading"];
+            alert("Document Heading : "+ret.innerHTML);
+
+            var ret = document.all.tags("P");
+            alert("First Paragraph : " + ret[0].innerHTML);
+        }
+    </script>
+</head>
+<body>
+    <h1 id="heading">vignesh kumar</h1>
+    <p>click me</p>
+    <form action="" name="firstform" id="form1">
+        <input type="button" value="click me" onclick="myfun();">
+        <input type="button" value="cancel">
+    </form>
+    <form id="form2" name="secondform">
+        <input type="button" value="dont click me">
+    </form>
+</body>
+</html>

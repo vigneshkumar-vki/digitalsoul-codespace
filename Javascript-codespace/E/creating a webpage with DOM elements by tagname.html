@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>
+        getElementsByTagName()
+    </h2>
+    <p>This is Para one</p>
+    <p>This is para two</p>
+    <h2>The getElementsByTagName() Method
+    </h2>
+    <p>This is para three</p>
+    <p>This is para four</p>
+
+    <script>
+        var ec = document.getElementsByTagName('h2');
+        for (var i=0; i<ec.length; i++)
+    {
+        ec[i].style.backgroundColor = "Purple";
+        ec[i].style.padding = "12px";
+        ec[i].style.color = "white";
+    }
+    var ec =document.getElementsByTagName('p');
+
+    for (var i=0; i<ec.length; i++)
+    {
+        ec[i].style.color='blue';
+    }
+    </script>
+
+</body>
+</html>

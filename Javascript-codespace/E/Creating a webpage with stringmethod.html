@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function sayhello()
+        {
+            var n =prompt("Enter the String",0);
+            document.write(n);
+        }
+    </script>
+</head>
+<body>
+    <p>click the button</p>
+    <form action="">
+        <input type="button" onclick="sayhello()" value="sayhello" >
+
+    </form>
+    <script>
+        function sayHello1(name,age)
+        {
+            document.write(name+" is "+age +" years old.");
+        }
+    </script>
+    <p>click the button</p>
+    <form action="">
+        <input type="button" onclick="sayHello1('vk',25)" value="say hello">
+    </form>
+    <script>
+        function concatenate(first,last)
+        {
+            var full;
+            full = first + last;
+            return full;
+        }
+        function secondfunction()
+        {
+            var result;
+            result =concatenate("vignesh","kumar");
+            document.write(result);
+        }
+    </script>
+    <p>click the button</p>
+
+    <form action="">
+        <input type="button" onclick="secondfunction()" value="call function">
+    </form>
+    <script>
+        function hypotenuse(a,b){
+            function square(x) 
+            {
+                return x*x;
+            }
+            return Math.sqrt(square(a) +square(b));
+        }
+        function secondfunction1()
+        {
+            var result;
+            result = hypotenuse(1,2);
+            document.write(result);
+        }
+    </script>
+    <p>click the btn</p>
+    <form action="">
+        <input type="button" onclick="secondfunction1()" value="call function">
+    </form>
+
+    <script>
+        var func =new Function("x","y","return x*y")
+        {
+            function secondfunction2()
+            {
+                var result;
+                result = func(10,20);
+            }
+        }
+    </script>
+    <p>click the button</p>
+    <script>
+        var func =function(x,y){return x*y};
+        function secondfunction3()
+        {
+            var result;
+            result = func(10,20);
+            document.write(result);
+        }
+    </script>
+    <form action="">
+        <input type="button" onclick="secondfunction3()" value="call function">
+    </form>
+</body>
+</html>

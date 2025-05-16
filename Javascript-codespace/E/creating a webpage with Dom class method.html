@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>The value is <span class="e"></span></p>
+    <p>The value is <span class="e"></span></p>
+    <p>The value is <span class="e"></span></p>
+
+    <script>
+        var elements = document.getElementsByClassName("e");
+        var totElements =elements.length;
+
+        for (var i=0; i<totElements; i++)
+    {
+        elements[i].innerHTML=10;
+    }
+    </script>
+</body>
+</html>

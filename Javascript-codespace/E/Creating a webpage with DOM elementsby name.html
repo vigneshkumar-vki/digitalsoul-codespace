@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p name="red">Para one</p>
+    <p name="red">Para two</p>
+    <script>
+        var ec=document.getElementsByName("red");
+        for(i=0; i<ec.length; i++)
+    {
+        ec[i].style.color="red";
+    }
+    </script>
+</body>
+</html>

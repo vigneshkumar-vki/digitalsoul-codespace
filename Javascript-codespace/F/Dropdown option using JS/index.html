@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drop-down Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="hero">
+        <nav>
+            <img src="images/JS.png" class="logo" alt="">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Training</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contacts</a></li>
+            </ul>
+            <img src="images/avatar.png" alt="profile" class="user-pic" onclick="toggleMenu()">
+            <div class="sub-menu-wrap" id="subMenu">
+                <div class="sub-menu">
+                    <div class="java-info">
+                        <img src="images/avatar.png">
+                        <h3>Vignesh kumar</h3>
+                    </div>
+                    <hr>
+                    <a href="#" class="sub-menu-link">
+                        <img src="images/courses.png">
+                        <p>Courses details</p>
+                        <span></span>
+                    </a>
+                    <a href="#" class="sub-menu-link">
+                        <img src="images/setting.png">
+                        <p>Settings</p>
+                        <span></span>
+                    </a>
+                    <a href="#" class="sub-menu-link">
+                        <img src="images/security.png">
+                        <p>security</p>
+                        <span></span>
+                    </a>
+                    <a href="#" class="sub-menu-link">
+                        <img src="images/support.png">
+                        <p>support</p>
+                        <span></span>
+                    </a>
+                </div>
+
+            </div>
+        </nav>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

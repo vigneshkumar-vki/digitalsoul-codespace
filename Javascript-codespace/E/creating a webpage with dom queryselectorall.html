@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>This is para one</p>
+    <p>This is para two</p>
+    <p>This is para three</p>
+    <p class="red">This is para four</p>
+    <p class="red">This is para five</p>
+    <script>
+        var ec=document.querySelectorAll(".red");
+        for(var i=0; i<ec.length; i++)
+    {
+        ec[i].style.color = "red";
+    }
+    </script>
+</body>
+</html>
