@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- regular Expression -->
+     <p>The first 'is' is available at index no : <span id="sch"></span></p>
+     <p>'is' matches : <span id="match"></span></p>
+     <p>list of all Matches for First Pattern: <b><span id="resA"></span></b></p>
+     <p>list of all Matches for Second Pattern: <b><span id="resB"></span></b></p>
+     <p>list of all Matches for Third Pattern: <b><span id="resC"></span></b></p>
+
+     <script>
+        let myString = "JavaScript is Fun, is not it?";
+        let pos= myString.search(/is/);
+
+        document.getElementById("sch").innerHTML=pos;
+
+        let matches =myString.match(/is/);
+        document.getElementById('match').innerHTML=matches;
+
+        let text= "We have created a Online learning center.";
+        let a= text.match(/[re]/gi);
+        let b= text.match(/[^re]/gi);
+        let c= text.match(/[a-d]/gi);
+
+        document.getElementById('resA').innerHTML = a;
+        document.getElementById('resB').innerHTML = b;
+        document.getElementById('resC').innerHTML = c;
+        
+
+     </script>
+</body>
+</html>

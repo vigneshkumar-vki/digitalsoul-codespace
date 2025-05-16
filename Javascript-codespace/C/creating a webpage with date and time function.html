@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        p {
+            font-size: 1.5em;
+            text-align: center;
+            padding: 10px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <p>current Date and Time : <span id="res"></span></p>
+    <script>
+        function updateTime()
+        {               
+                const d=new Date();
+                let yyyy =d.getFullYear();
+                let mn = d.getMonth()+1;  //starts with 0.
+                let dd = d.getDate();
+                let hh = d.getHours();
+                let mm = d.getMinutes();
+                let ss = d.getSeconds();
+                if(mn<10)
+                
+                        mn='0'+mn;
+                
+                if(dd<10)
+                
+                        dd='0'+dd;
+                
+                if(hh<10)
+                
+                        hh = '0'+hh;  
+                
+                if(mm<10)
+                
+                        mm='0'+mm;
+                
+                if(ss<10)
+                
+                        ss='0'+ss;
+
+                let apm= hh<12 ? 'AM': 'PM';
+                hh = hh%12;
+                if (hh === 0) hh = 12; // Adjust for 12-hour clock format
+                let dt = dd + "/" + mn +"/"+ yyyy +" "+ hh + ':'+ mm +':'+ ss +' '+apm;
+                document.getElementById('res').innerHTML=dt;
+        }
+
+         setInterval(updateTime, 1000);
+       // setTimeout(updateTime,5000)
+        updateTime(); // Initial call to display the time immediately
+    </script>
+</body>
+</html>

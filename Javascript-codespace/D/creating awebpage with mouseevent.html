@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+<p>click</p>
+    <input type="button" onclick="hello()" value="hello">
+   <p id="message"></p>
+
+   <div onmouseover="over()" onmouseout="out()">
+        <h2>This is inside the division</h2>
+    </div>
+
+    <div onmouseover="over()" onmouseout="out()">
+        <h2>This is outside the division</h2>
+    </div>
+   <script>
+            
+        function hello() {
+            document.getElementById('message').innerHTML = "hello world";
+        }
+        function over() {
+            document.getElementById('message').innerHTML = 'mouse over';
+        }
+        function out() {
+            document.getElementById('message').innerHTML = 'mouse out';
+        }
+   </script>
+
+</body>
+</html>

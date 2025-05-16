@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            margin: 20px 50px  ;
+            width: 170px;
+            height: 8vh;
+            color: aquamarine;
+            background-color: black;
+            border-radius: 10px;
+            
+        }
+        input{
+            /* margin: 0px 0px  ; */
+            width: 170px;
+            height: 6vh;
+            color: black;
+            background-color:rgba(14, 55, 53, 0.3);
+            border-radius: 10px;
+            border: none;
+            
+        }
+        button:hover{
+            background-color: cadetblue;
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+    <h3>javascript onclick event example</h3>
+    <form name="myform">
+      <b>Name : </b>  <input type="text" id="name" value=" "><br>
+        <button  onclick="alert('Hi'+document.getElementById('name').value + ',welcome to javascript ! ')">submit</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function order()
+        {
+            var order = "dear ";
+            order = order + document.forms[0].Name.value
+            order = order + ", You have ordered a laptop with size";
+            if (document.forms[0].size.options[0].selected)
+            {
+                order = order +"small"
+            }
+            if (document.forms[0].size.options[1].selected)
+            {
+                order = order + "medium"
+            }
+            if(document.forms[0].size.options[2].selected)
+            {
+                order = order +"large"
+            }
+            order = order +"The order will be delivered in a "
+            if(document.forms[0].packaging[0].checked)
+            {
+                order =order +"cardboard box"
+            }
+            if(document.forms[0].packaging[1].checked)
+            {
+                order = order + "styrofoam-insulated container"
+            }
+            order = order + "to the address:"
+            order = order + document.forms[0].address.value
+            alert(order)
+        }
+    </script>
+</head>
+<body>
+    <h3>Javascript Document Object with Forms Example</h3>
+    <br action="mailto:vigneshkumarjeyalakshmi@gmail.com" method="post" onsubmit="order()" enctype="text/plain">
+        Name : <input type="text"  name="Name" size="20"></br><br>
+        Address : <input name="address" size="20" ><br><br>
+        Laptop Size : <select name="size" id="">
+            <option value="">small</option>
+            <option selected>medium</option>
+            <option value="">large</option>
+            <br><br>
+        </select>
+        packaging : <input type="radio" name="packaging">cardbord box
+        <input type="radio" name="packaging" > styrofoam - insulated container <br><br>
+        <input type="submit" value="place order">
+    </form>
+</body>
+</html>

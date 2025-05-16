@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function person(name){
+            this.name = name;   
+            //creating method
+            this.greetings = function(){
+                document.write("my name is "+name);
+            }
+        }
+        var person=new person("vignesh kumar");
+        person.greetings();
+
+    </script>
+</body>
+</html>

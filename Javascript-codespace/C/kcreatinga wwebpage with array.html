@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: lightblue;">
+           <!-- This is static way (Script inside paragraph) -->
+    <p>                                      
+        <script>
+            var br='</br>';
+            var myarr=new Array();
+            myarr[0]='hello';
+            myarr[1]='javascript';
+            myarr[2]='welcome all';
+            alert('ONE DIMENSIONAL ARRAY')
+            
+            document.write("",myarr[0]);
+            document.write(br);
+            document.write("",myarr[1]);
+            document.write(br);
+            document.write(br);
+            document.write('',myarr[0],' ',myarr[1],br,myarr[2])
+        </script>
+    </p>
+
+    <p>
+        <script>
+            var myarr2 = new Array();
+            myarr2[0] = new Array();
+
+            myarr2[0][0]=prompt('enter value a :','');
+            myarr2[0][1]=prompt('enter value b :','');
+            myarr2[0][2]=prompt('enter value c :','');
+
+            document.write("",myarr2[0][0]);
+            document.write(br);
+            document.write("",myarr2[0][1]);
+            document.write(br);
+            document.write("",myarr2[0][2]);
+            document.write(br);
+
+
+        </script>
+    </p>
+    
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Nodes - check child Nodes</title>
+    <script>
+        function checkNode(value)
+        {
+            var tag = document.getElementById(value);
+            if (tag.hasChildNodes())
+                {
+                    alert("Node has child nodes");
+                }
+            else
+                {
+                    alert ('Node has no child nodes');
+                }
+        }
+    </script>
+</head>
+<body id="T1">
+    <h3>vignesh</h3>
+    <p> click</p>
+    <input type="button" onclick="checkNode('T1');" value="checked child node">
+    <p>click on the button</p>
+    <input type="button" id="T2" onclick="checkNode('T2');" value="Check child node">
+</body>
+</html>

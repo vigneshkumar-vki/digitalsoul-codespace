@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: rgb(52, 120, 244);">ocean</h1>
+    <script> 
+    const person = {
+                        name : 'kumar.' ,
+                        age:27,
+                    }
+                    const clonePerson=Object.assign({},person); // kumar person is stored in assign  in here for safety . to avoid  changing of values when changing one (see commented code:)
+
+                    console.log(clonePerson);
+                    // let p1=person //p1 reference 
+                    // let p2=p1;
+                    // p2.name="saravana"
+                    // document.write(p1.name)
+                    // document.write(p2.name)
+
+
+                    clonePerson.name = 'R.vignesh ';
+                    document.write(clonePerson.name);
+                    document.write(person.name);                            
+                    document.write(person.age);                            
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function doOnce()
+        {
+            if (
+                !document.cookie
+                .split(";")
+                .find((row)=> row.startsWith("time"))
+                )
+                {                       //0 index   1                                       2               3
+                    document.cookie = "time=true; expires =fri, 04 Jan 2025 16:00:00 GMT; SameSite=None; secure";
+
+                    const output = document.getElementById("do-once");
+                    output.textContent = ">Welcome to Js...!"
+                }
+        }
+        function clearOutputDoOnce()
+        {
+            const output =document.getElementById("do-once");
+            output.textContent= "";
+        }
+    </script>
+</head>
+<body>
+        <button onclick="doOnce()">only do something once</button>
+        <button onclick="clearOutputDoOnce()">clear</button>
+
+        <div>
+            <code id="do-once"></code>
+        </div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function warn(){
+            alert("This is warning message !");
+            document.write("This is a warning message!");
+        }
+    </script>
+</head>
+<body>
+    <p>click the button</p>
+    <form>
+        <input type="button" value="click me" onclick="warn();"> 
+    </form>   
+    <script>
+        function getconfirmation()
+        {
+            var retval=confirm("Do you want to continue ?");
+            if(retval==true)
+            {
+                document.write("user wants to continue !")
+                return true;
+            }
+            else{
+                document.write("user does not want to continue!");
+                return false;
+            }
+        }
+    </script>
+
+    <form>
+        <input type="button" value="click" onclick="getconfirmation();">
+    </form>
+
+    <script>
+        function getvalue()
+        {
+            var retval =prompt("Enter name :","Your name here...");
+            document.write("your have entered :" + retval);
+        }        
+    </script>
+    <p>click me</p>
+    <form>
+        <input type="button" value="clickme" onclick="getvalue();">
+    </form>
+    
+</body>
+</html>

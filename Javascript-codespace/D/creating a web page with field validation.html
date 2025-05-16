@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requred fieds validation</title>
+    <script>
+        function ValidateRequiredField(this_form)
+        {
+            var username = this_form.usrname.value;
+            var Password = this_form.usrpassword.value;
+            if (username == null || username=="")
+                {
+                    alert("Please enter your username");
+                    this_form.usrname.focus();
+                    return false;
+                }
+            if (Password == null || Password=="")
+                {
+                    alert("Please enter your Password");
+                    this_form.usrPassword.focus();
+                    return false;
+                }
+                return true;
+        }
+    </script>
+</head>
+<body>
+    <form action="#" onsubmit="return ValidateRequiredField(this)" method="post">
+        username: <input type="text" name="usrname"><br>
+        Password: <input type="password" name="usrpassword"><br>
+        <input type="submit" value="Login">
+
+    </form>
+</body>
+</html>

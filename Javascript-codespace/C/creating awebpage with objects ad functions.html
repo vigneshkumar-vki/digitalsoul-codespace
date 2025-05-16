@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>object method</p>
+    <p>function definition :</p>
+    <p id="demo"></p>
+    <script>
+        var person={
+            fname:"vignesh",lname:"kumar",id:3795,
+            calling :function(){
+                return this.fname+" "+this.lname;
+                                }                     
+        }
+        document.getElementById('demo').innerHTML=person.calling();
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="set cookie" onclick="setcookie()">
+    <input type="button" value="get cookie" onclick="getcookie()">
+
+    <script>
+        function setcookie()
+        {
+            document.cookie="username=vignesh; expires=Fri, 31 Jan 2025 15:20:59 UTC";
+        }
+        function getcookie()
+        {
+            if(document.cookie.length != 0)
+            {
+                var array=document.cookie.split("=");
+                alert("Name = " + array[0] +" "+"value = "+ array[1]);
+            }
+            else{
+                alert("cookie not available");
+            }
+        }
+    </script>
+</body>
+</html>

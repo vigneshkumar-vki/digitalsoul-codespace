@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ 
+
+img {
+    display: block;
+    width: 10%;
+    height: 10%;
+    object-fit: cover;
+}
+.button-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+     
+    </style>
+    <script>
+        var imgobj= null;
+        function init(){
+            imgobj = document.getElementById('myimage');
+            imgobj.style.position='relative';           //absolute- starts from begining of the page.//relative -means measurement starts from end of the button.
+            imgobj.style.left='500px';
+            imgobj.style.right='0px'; 
+        }
+        function moveLeft()
+        {
+            imgobj.style.left = parseInt(imgobj.style.left) - 10 + 'px';
+        }
+        function moveRight()
+        {
+            imgobj.style.left = parseInt(imgobj.style.left) + 100 + 'px';
+        }
+       
+        window.onload = init;
+    </script>
+</head>
+<body>
+    <div class="container">
+        <form>
+            <img id="myimage" src="spaceman.png" alt="">
+            <div class="button-group">
+                <p>click</p>
+                <input type="button" value="left" onclick="moveLeft()">
+                <input type="button" value="right" onclick="moveRight()">
+            </div>
+        </form>
+    </div>
+   
+</body>
+</html>

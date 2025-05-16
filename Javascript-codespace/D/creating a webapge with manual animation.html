@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual animation</title>
+    <script>
+        var image_object = null;
+        function init()
+        {
+            image_object = document.getElementById('color1');
+            image_object.style.position="relative";
+            image_object.style.left="0px";
+        }
+        function moveRight()
+        {
+            image_object.style.left= parseInt(image_object.style.left) + 100 +'px';
+        }
+        window.onload =init;
+    </script>
+
+</head>
+<body>
+    <form action="">
+        <img src="spaceman.png" alt="" id="color1"  style="height: 100px; width:100px ;">
+        <p>click on the <b>ANIMATE</b> button to animate the image manually.</p>
+        <input type="button" value="Animate" onclick="moveRight()">
+    </form>
+</body>
+</html>

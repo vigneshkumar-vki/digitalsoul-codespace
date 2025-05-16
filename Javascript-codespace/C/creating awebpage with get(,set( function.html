@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: rgb(60, 219, 60);">Nature</h1>
+    <h3 style="color: aquamarine;">Javascript Getter and Setter</h3>
+    <script>
+        let user={
+            get name()
+            {                                                   
+                return this._name;                          //name=public
+            },                                              //_name=protected
+            set name(value)                                 //__name=private
+            {
+                if(value.length < 5){
+                    alert("name is short,Please give 5 characters");
+                    return;
+                }
+                this._name=value;
+            }
+        };
+        user.name="vignesh";
+        alert(user.name);
+        
+        user.name="k";
+        alert(user.name);
+    </script>
+</body>
+</html>

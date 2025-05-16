@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bg-color="white">
+        <select name="" id="color" onchange="display()">
+            <option value="select color">select color</option>
+            <option value="yellow">yellow</option>
+            <option value="green">green</option>
+            <option value="black">black</option>
+        </select>    
+        <script>
+            function display()
+            {
+                var value= document.getElementById('color').value;
+                if(value != "select color")
+                    {
+                        document.bgcolor=value;
+                        document.cookie ='color='+ value;
+                    }
+            }
+            window.onload= function()
+            {
+                if (document.cookie.length != 0)
+                {
+                    var array = document.cookie.split('=');
+                    document.getElementById('color').value = array[1];
+                    document.bgColor = array[1];
+                }
+            }
+        </script>
+</body>
+</html>

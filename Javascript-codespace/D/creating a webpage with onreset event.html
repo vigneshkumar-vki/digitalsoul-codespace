@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            }
+        
+        input{
+            margin: 8px 0px ;
+        }
+        h3{
+            margin-left: 0;
+        }
+    </style>
+</head>
+<body>
+    <h3>Javascript onreset Event</h3>
+    <form onreset="alert('successfully Reset')">
+        <b>Name</b><input type="text" name="name" value=" "><br><br>
+        <b>Age</b><input type="text" name="Age" value=" "><br><br>
+        <b>City</b><input type="text" name="city" value=" "><br><br>
+        <input type="reset"value="Reset">
+
+    </form>
+</body>
+</html>

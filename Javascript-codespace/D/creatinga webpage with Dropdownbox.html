@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form style="text-align: center;">
+        <p><h2>select one option</h2>
+        <select name="s" id="options">
+            <option value>select</option>
+            <option value="http://www.google.com">google</option>
+            <option value="30s.mp4">video</option>
+            <option value="speaker.png">image</option>
+            <option value="HTML revise.docx">document</option>
+        </select></p>
+        <div align="center"><center><table border="0" cellpadding="3" cellspacing="5">
+            <tr>
+                <td>
+                    <input type="button" name="play" value="view" onclick="navigate()">
+
+                </td>
+            </tr>
+        </table></center></div>
+    </form>
+    <script>
+        function navigate()
+        {
+            var select = document.getElementById('options');
+            var url= select.options[select.selectedIndex].value;
+            if (url){
+                window.location.href=url;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function getElement()
+        {
+            new_window = window.open('')
+            new_window.document.open()
+
+            var len1 =document.getElementsByName('ab');
+            new_window.document.write("length of your Name is " + len1.length)
+            new_window.document.close()
+        }
+    </script>
+</head>
+<body>
+    <h3>Javascript Document Object Methods Example</h3>
+    
+    first Name : <input type="text" name="ab" size="20"><br><br>
+    Middle Name : <input type="text" name="abc" size="20"><br><br>
+    Last Name : <input type="text" name="abcd" size="20"><br><br>
+
+    <input type="button" onclick="getElement()" value="calculate length">
+
+    
+</body>
+</html>

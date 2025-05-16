@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            font-size: xx-large;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 10vh;
+            margin-top: 20%;
+        }
+    </style>
+</head>
+<body>
+   
+    <button onclick="myfunction()">click to Enter Name</button>
+    <p id="msg"></p>
+    <script>
+        function myfunction()
+        {
+            let txt;
+            let x= prompt("enter your name : ");
+            if (x==null || x=="")
+        {
+            txt="you've not entered your name!";
+        }
+        else{
+            txt = "welcome "+x;
+        }
+        document.getElementById('msg').innerHTML=txt;
+        }
+    </script>
+</body>
+</html>

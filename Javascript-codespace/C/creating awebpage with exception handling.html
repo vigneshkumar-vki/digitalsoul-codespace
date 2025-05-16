@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>enter a number between 50 and 100</p>
+    <input type="number" id="demoinput" min="50" max="100" step="1">
+    <button type="button" onclick="errorhandle()">check</button>
+    <p id="errormessage"></p>
+
+    <script>
+        function errorhandle() {
+            var message ,x;
+            message=document.getElementById("errormessage");
+            message.innerHTML="";
+
+            x=document.getElementById('demoinput').value;
+
+            try{
+                if(x == "")
+                    throw "empty";
+                if(isNaN(x))
+                    throw "not a number";
+                if(x>=50 && x<=100)
+                    throw "OK!";
+                if(x<50)
+                    throw "less than 50";
+                if(x>100)
+                    throw "greater than 100";    
+            }
+            catch(error)
+            {
+                message.innerHTML = "The Input is : "+error ;
+            }
+        }
+    </script>
+</body>
+</html>

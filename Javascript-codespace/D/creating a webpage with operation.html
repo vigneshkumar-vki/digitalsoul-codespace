@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function weeknumber(){
+            var dateinput = document.getElementById("dateInput1").value;
+            var date1 = new Date(dateinput);
+            var oneJan = new Date (date1.getFullYear(),0,1);
+            var numberofDays = Math.floor((date1 - oneJan) / (24*60*60*1000));
+            var result = Math.ceil((date1.getDay() + 1 +numberofDays)/7);
+
+            return document.getElementById("result").innerHTML ="week number of given date is : " + result;
+        }
+    </script>
+</head>
+<body>
+    <h2 style="color: 32A80F;"align="center" >calculate week Number</h2><br><br><br>
+    <p align="center"><b>Enter date</b>
+    <input type="date" id="dateInput1"><br><br>
+    <button onclick="weeknumber()">calculate weeks</button>
+    </p>
+    <h3 style="color: 32A80F; " id="result" align="center"></h3>
+
+</body>
+</html>

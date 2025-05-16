@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: green;">Earth</h1>
+    <script>
+        var Student =function(rollno,name,age) //function expression
+        {
+        //     var student = {}; //creating empty object
+        //    //instance(object variable) 
+        //     student.rollNo=rollno;  //rollno(local variable which mean function paramters)
+        //     student.name =name;
+        //     student.age =age;
+        //     //creating method 
+        //     student.greeting =function()
+        //     {
+        //         return(
+        //             'hello i am '+student.name+
+        //             'My roll no is '+ student.rollNo +
+        //             '.I am ' +student.age+'years old.</br></br>'
+        //         );
+        //     };
+                let student={
+                    rollNo:rollno,
+                    name:name,
+                    age:age,
+
+                    greet:function(){
+                        return `hi..my roll no is ${rollno} and my name ${name}😎 ...my age is ${age} i'm enjoy with 🍺`
+                    }
+                }
+            return student; //return a object 
+        };
+        var student1= Student(18,'vignesh',27); 
+        document.write(student1.greet());
+        var student2= Student(10,'raj',25);
+        document.write(student2.greet());
+    </script>
+</body>
+</html>

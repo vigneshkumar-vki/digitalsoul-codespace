@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            height: 45vh;
+            width: 28vh;
+    
+        }
+        h2,p{
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+        .centered {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        img[name="png"]{
+            max-height: 100%;
+            max-width: 100%;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="centered">
+        <h2>Mouse event example</h2>
+        <p>Click the button given here.   </p><br><br><br><br>
+        <button onmousedown="document.images['png'].src='bee.png'" 
+                onmouseup="document.images['png'].src='nature.png'">
+            <img name="png" src="nature.png" alt="Nature Image">
+        </button>
+    </div>
+</body>
+</html>

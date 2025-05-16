@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Find sum of Number : <span id="sum"></span></p>
+    <script>
+        const numbers=[12,32,43,54];
+        let sum=0;
+        // numbers.forEach(findSum);
+        // for(let i of numbers){
+        //      sum+=i;
+        // }
+        // function num (num){
+        //     sum+=num
+        // }
+
+        numbers.forEach(n=>sum+=n)
+        // document.write("<h1>sum :"+sum+"</h1>")
+        document.write(`<h1> sum is :${sum}</h1>`) //template literals
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: rgb(110, 179, 215);">sky</h1>
+    <script>
+        function User (name, birthday)
+        {
+            this.name = name;                   //----->PROPERTY
+            this.birthday = birthday;           //----->   "
+            Object.defineProperty(this,"age",{
+                get(){
+                    let todayYear = new Date().getFullYear();
+                    return todayYear - this.birthday.getFullYear();
+                }
+            });
+        }
+        let jas = new User("vignesh",new Date(1997,19,20));    //MONTH STARTS IN 0
+        alert (jas.birthday);
+        alert (jas.age);
+    </script>
+</body>
+</html>

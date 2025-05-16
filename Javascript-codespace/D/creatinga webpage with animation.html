@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var imgObj = null;
+        var animate;
+        function init()
+        {
+            imgObj = document.getElementById('myimage');
+            imgObj.style.position="relative";
+            imgObj.style.left='40px';
+        }
+
+        function moveRight()
+        {
+            imgObj.style.left = parseInt(imgObj.style.left)+10+'px';
+            animate= setTimeout(moveRight,2000); //moving speed
+        }
+        function stop()
+        {
+            clearTimeout(animate);
+            imgObj.style.left = '0px';
+        }
+        window.onload = init;
+    </script>
+</head>
+<body>
+    <form action="">
+        <img id="myimage"src="spaceman.png" alt="" height="150px">
+        <p>click the buttons below to handle animation</p>
+        <input type="button" value="start" onclick="moveRight()">
+        <input type="button" value="stop" onclick="stop()">
+    </form>
+</body>
+</html>
