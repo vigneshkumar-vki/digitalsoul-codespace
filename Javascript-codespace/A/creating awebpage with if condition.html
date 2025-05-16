@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var deg=Number(prompt("Enter the degrees fahrenheit",32));
+        var deg2;
+
+        deg2=5/9*(deg-32);
+        document.write(deg+"\xB0 fahrenheit is " + deg2 +"\xb0 centigrade </br>");
+        if(deg2<0)
+            {
+             document.write ("That is below the freezing point of water");   
+            }
+        if (deg2==100){
+            document.write("It is boiling point of water");
+        }
+    </script>
+</body>
+</html>

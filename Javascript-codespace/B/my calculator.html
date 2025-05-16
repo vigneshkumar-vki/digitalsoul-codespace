@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript ARITHMETHIC OPERATORS</title>
+</head>
+<body>
+    <H1>PERFORMING ARITHMETHIC OPERATIONS</H1>
+    <SCRIPT>
+        function multiply()
+        {
+            a= Number(document. my_cal.first.value);
+            b= Number(document. my_cal.second.value);
+            c=a*b;
+            document.my_cal.total.value=c;
+        }
+   
+        function addition()
+        {
+            a= Number(document. my_cal.first.value);
+            b= Number(document. my_cal.second.value);
+            c=a+b;
+            document.my_cal.total.value=c;
+        }
+   
+        function subtraction()
+        {
+            a= Number(document. my_cal.first.value);
+            b= Number(document. my_cal.second.value);
+            c=a-b;
+            document.my_cal.total.value=c;
+        }
+    
+        function division()
+        {
+            a= Number(document. my_cal.first.value);
+            b= Number(document. my_cal.second.value);
+            c=a/b;
+            document.my_cal.total.value=c;
+        }
+
+        function modulus()
+        {
+            a= Number(document. my_cal.first.value);
+            b= Number(document. my_cal.second.value);
+            c=a%b;
+            document.my_cal.total.value=c;
+        }
+    </SCRIPT>
+
+    <form name="my_cal">
+        Number 1: <input type="text" name="first">
+        <br><br>
+        Number 2: <input type="text" name="second">
+        <br><br>
+
+        <input type="button" value="ADD" onclick="javascript:addition();">
+        <input type="button" value="SUB" onclick="javascript:subtraction();">
+        <input type="button" value="MUL" onclick="javascript:multiply();">
+        <input type="button" value="DIV" onclick="javascript:division();">
+        <input type="button" value="MOD" onclick="javascript:modulus();">
+    <br><br>
+    Get Result : <input type="text" name="total">
+    </form>
+
+</body>
+</html>

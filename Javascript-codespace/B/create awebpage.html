@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>constant values</title>
+</head>
+<body>
+    <h2>constant values</h2>
+    <p>Declaring a constant array does not make the elements unchangeable :</p>
+    <p id="demo"></p>
+    <script>
+        const courses=['java','spring','sql'];
+        courses[0]='html & css';
+        courses.push('javascript');
+
+        document.getElementById('demo').innerHTML=courses;
+    </script>
+</body>
+</html>

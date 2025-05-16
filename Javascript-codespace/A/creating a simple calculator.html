@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+</head>
+<body>
+    <center>
+        <script>
+            function compute(){
+                var add=parseInt(document.forms[0].firstvalue);
+                var add= add + parseInt(document.forms[0].secondvalue);
+                document.forms[0].addition.value=add;
+    
+                var sub = parseInt(document.form[0].firstvalue);
+                var sub = sub - parseInt(document.form[0].secondvalue);
+                document.form[0].subtraction.value=sub;
+    
+                var mul = parseInt(document.form[0].firstvalue)
+                var mul = mul * parseInt(document.form[0].secondvalue)
+                document.form[0].multiplication.value=mul;
+            }
+            function resetIt(){
+                document.forms[0].first.value=" ";
+                document.forms[0].second.value=" ";
+                document.forms[0].addition.value=" ";
+                document.forms[0].subtraction.value=" ";
+                document.forms[0].multiplication.value=" ";
+            }
+        </script>
+        <form>
+            <table border="4" width="250" cellpadding="15">
+                <tr>
+                    <td align="center" <font size=+1><strong>first</strong></font>    </td>
+                    <td align="center" <font size=+1><strong>second</strong></font>    </td>
+                </tr>
+                <tr>
+                    <tr>
+                        <td align="center" INPUT type="text name=first" value="00" size="10" >   </td>
+                        <td align="center"  INPUT type="text name=second" value="00" size="10">    </td>
+                    </tr>
+                </tr>
+    
+            </table>
+            <br>
+            <table border="6" width="600" cellpadding="15">
+                <tr>
+                    <td align="center" <font size=+1> <strong>addition</strong> </font>    </td>
+                    <td align="center" <font size=+1> <strong>subtraction</strong> </font>   </td>
+                    <td align="center" <font size=+1> <strong>multiplication</strong> </font>    </td>
+                </tr>
+                <tr>
+                    <td align="center" INPUT type="text name=addition" size="15">   </td>
+                    <td align="center" INPUT type="text name=subtraction" size="15">   </td>
+                    <td align="center" INPUT type="text name=multiplication" size="15">   </td>
+                </tr>
+                <br>
+                <table border="0" width="400" cellpadding="5">
+                    <tr>
+                        <td align="center"><input type="reset"  value="reset" onclick="resetIt()"></td>
+                        <td align="center"><input type="button"  value="compute" onclick="compute()"></td>
+                    </tr>
+    
+                </table>
+            </table>
+    </center>
+    
+        
+    </form>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function get_random(maxNum)
+        {
+            if(Math.random && Math.round)
+                {
+                    var ranNum=Math.round(Math.random()*(maxNum-1));
+                    ranNum+=1;
+                    return ranNum;
+                }
+                else
+                {
+                    today =new Date();
+                    hours =today.getHours();
+                    mins =today.getMinutes();
+                    sec =today.getSeconds();
+
+                    if(hours==19)
+                    hours=18;
+                var ranNum =(((hours+1)*(mins+1)*sec)%maxNum)+1;
+                return ranNum;
+                }
+        }
+        function getaquote()
+        {
+            var maxQuotes=10;
+            var whichQuote=get_random(maxQuotes);
+            whichQuote--;
+        
+            var quote=new Array(maxQuotes)
+            Quote[0]="The best way to predict the future is to invent it.";
+            Quote[1]="Don't watch the clock; do what it does. Keep going.";
+            Quote[2]="Your time is limited, don't waste it living someone else's life.";
+            Quote[3]="Success is not the key to happiness. Happiness is the key to success. If you love what you are doing, you will be successful.";
+            Quote[4]="The harder you work for something, the greater you’ll feel when you achieve it.";
+            Quote[5]="Dream big and dare to fail.";
+            Quote[6]="Believe you can and you're halfway there.";
+            Quote[7]="You are never too old to set another goal or to dream a new dream.";
+            Quote[8]="Don't be pushed around by the fears in your mind. Be led by the dreams in your heart.";
+            Quote[9]="Success usually comes to those who are too busy to be looking for it.";
+
+            alert(quote[whichQuote]);
+        }
+
+    </script>
+<center style="margin-top: 15%; ">
+    <form name="form1">
+        <button onclick="getaquote()" >
+            <img src="get a quote.png" alt="quote" height="100">
+        </button>
+        
+        
+        
+    </form>
+</center>
+    
+</body>
+</html>

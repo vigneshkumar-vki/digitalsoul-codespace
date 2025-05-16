@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="steelblue">
+   
+    <script>
+        var a = Number(prompt("Enter the value for a", 0));
+        var b = Number(prompt("Enter the value for b", 0));
+        var br = "</br>";
+
+        function displayResult(expression, result) {
+            document.write(expression + " => " + result + br);
+        }
+
+        displayResult("(a == b)", (a == b));
+        displayResult("(a < b)", (a < b));
+        displayResult("(a > b)", (a > b));
+        displayResult("(a != b)", (a != b));
+        displayResult("(a >= b)", (a >= b));
+        displayResult("(a <= b)", (a <= b));
+
+    </script>
+</body>
+</html>

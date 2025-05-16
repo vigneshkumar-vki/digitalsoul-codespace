@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>lower case is <span id="lower"></span></p>
+    <p>upper case is <span id="upper"></span></p>
+    <p>first string :  <span id="one"></span></p>
+    <p>second string : <span id="two"></span></p>
+
+    <p> String after joining first and second string : <span id="concat"></span></p>
+    <p>length string : <span id="len"></span></p>
+    <p>Using search() : <span id="search"></span></p>
+    <p>Using match() : <span id="match"></span></p>
+    <p>Using replace() : <span id="replace"></span></p>
+
+    <script>
+        let firstString="vignesh";
+        let secondString="kumar";
+
+        let myLowerString=firstString.toLowerCase();
+        document.getElementById("lower").innerHTML=myLowerString;
+        
+        let myUpperString=secondString.toUpperCase();
+        document.getElementById("upper").innerHTML=myUpperString;
+
+        let concatString= firstString.concat(secondString);
+
+        document.getElementById('one').innerHTML=firstString;
+        document.getElementById('two').innerHTML=secondString;
+        document.getElementById('concat').innerHTML=concatString;
+        document.getElementById('len').innerHTML=concatString.length;
+
+        document.getElementById("search").innerHTML=firstString.search(/v/);
+        document.getElementById("match").innerHTML=firstString.match(/v/);
+        let myNewString= secondString.replace("vignesh","moorthi");
+        document.getElementById("replace").innerHTML=myNewString;
+
+
+
+    </script>
+
+
+    
+
+
+</body>
+</html>

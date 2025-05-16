@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .results{
+            border:green 5px solid;
+            background-color: aliceblue;
+            text-align:center;
+            padding-top: 20px;
+            height:300px;
+            width:80%;
+            justify-content: center;
+            margin-left: 10%;
+            margin-top: 5%;
+        }
+        .resultText{
+            font-size: 20px;
+            font-style: normal;
+            color: lightgreen;
+        }
+    </style>
+    <div class="results">
+    <h2>Results</h2>
+    <div class="resultText">
+        <p id="result1"></p>
+        <p id="result2"></p>
+        <p id="result3"></p>
+    </div>
+    </div>
+    <script>
+        document.getElementById("result1").innerHTML="!true"+"!true";
+        var x=5;
+        document.getElementById("result2").innerHTML="var x=5 </br> !x= " + !x;
+        var y=0;
+        document.getElementById("result3").innerHTML="var y=0 </br> !y = "+ !y;
+
+    </script>
+</body>
+</html>
